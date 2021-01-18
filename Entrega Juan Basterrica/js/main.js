@@ -15,7 +15,7 @@ let createHeader = (categorias) => { // nombre, pcia, ciudad, ambientes, valor
 
 };
 
-let createRow = (elemento, nroFila) => {
+let createRow = (elemento) => {
     let trEl = document.createElement('tr');
     for(let clave in elemento) {
         let tdEl = document.createElement('td');
@@ -40,30 +40,40 @@ let createRow = (elemento, nroFila) => {
 
 let createBody = (elementos) => {
     let tbodyEl = document.createElement('tbody');
-    let i = 1;
     elementos.forEach(elem => {
-        tbodyEl.appendChild(createRow(elem, i));
-        i = i + 1;
+        tbodyEl.appendChild(createRow(elem));
     });
     tableEl.appendChild(tbodyEl);
+    
 };
+
 
 window.addEventListener('load', () => {
     createHeader(opcion); 
     createBody(dataParseada.propiedades);   
 });
 
+let propiedad = {
+"Tipo": "", 
+"Provincia": "",
+"Ciudad": "", 
+"Ambientes": "", 
+"Valor": ""
+};
 
 
 
+/*btnAdd.addEventListener('click', () => {
+        let propiedad = document.createElement('input');
+        propiedad.value = '';
+        createBody.push(propiedad.value);
+        for (let clave in elemento);
+    let nuevaPropiedad = document.createElement('p');
+    nuevaPropiedad.innerHTML(propiedad);
+
+      });*/
 
 
-
-/*btnAgregarFila.addEventListener('click', () => {
-    let trEl = document.createElement('tr');
-    let tdEl = document.createElement('td');
-    let tipoInput = document.createElement('input');
-});*/
 
 
 /*btnEditar.addEventListener('click',()=>{
