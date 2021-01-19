@@ -63,15 +63,15 @@ let propiedad = {
 
 
 
-/*btnAdd.addEventListener('click', () => {
+btnAdd.addEventListener('click', () => {
+        createBody(dataParseada.propiedades);
+        for (let clave in elemento);
         let propiedad = document.createElement('input');
         propiedad.value = '';
-        createBody.push(propiedad.value);
-        for (let clave in elemento);
     let nuevaPropiedad = document.createElement('p');
-    nuevaPropiedad.innerHTML(propiedad);
+    nuevaPropiedad.innerHTML('ingrese dato de la propiedad');
 
-      });*/
+      });
 
 
 
